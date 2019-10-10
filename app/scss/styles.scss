@@ -1,0 +1,140 @@
+html, body {
+  height: 100%;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #F5F5F5;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  background-color: #F5F5F5;
+  border-radius: 10px;
+  max-height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #cfcad8;
+}
+
+.grid {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.grid > div {
+  border-right: 1px solid #ccc;
+}
+
+.grid > div:last-child {
+  border-right: none;
+}
+
+.template {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 100vh;
+}
+
+.jumbotron {
+  grid-column: 1 / 12 span;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.header {
+  grid-column: 1 / 12 span;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.main {
+  grid-column: 1 / 12 span;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.footer {
+  grid-column: 1 / 12 span;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.text {
+  grid-column: 2 / 8;
+}
+
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .grid > div:nth-child(6n) {
+    border-right: none;
+  }
+  .jumbotron {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .template {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .header {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .main {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .footer {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 576px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .jumbotron {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .template {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .header {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .main {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .footer {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .grid > div:nth-child(6n) {
+    border-right: 1px solid #ccc;
+  }
+  .grid > div:nth-child(4n) {
+    border-right: none;
+  }
+}
+
+
+
+
+
